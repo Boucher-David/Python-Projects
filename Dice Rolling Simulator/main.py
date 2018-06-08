@@ -14,6 +14,11 @@ def get_dice_sides():
         print("A dice needs at least one side! Try again: ")
         return get_dice_sides()
     else:
-        return print ("You rolled a %d on the %d-sided die." % (randrange(1, sided_dice), sided_dice))
+        return sided_dice
 
-get_dice_sides()
+
+def main():
+    dice_sides = get_dice_sides()
+    print("You rolled an %d on the %d-sided die." % (randrange(1, dice_sides), dice_sides))
+
+main()
